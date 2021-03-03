@@ -1,0 +1,105 @@
+main {
+  padding: 2rem 3rem;
+}
+/* General Form Styles */
+.signup-title {
+  text-align: center;
+  color: #ff5454;
+}
+.signup-form {
+  display: grid;
+  /* grid-auto-rows: 2rem; */
+  grid-row-gap: 0.5rem;
+}
+.signup-form label,
+.signup-form select,
+.signup-form input {
+  display: block;
+  width: 100%;
+  /* padding: 0.3rem; */
+}
+.signup-form input[id*='terms'],
+.signup-form input[id*='terms'] + label {
+  display: inline-block;
+  width: auto;
+  vertical-align: bottom;
+}
+.signup-form label {
+  font-weight: bold;
+}
+.signup-form input:not([type='checkbox']),
+.signup-form select:not([type='checkbox']) {
+  font-family: inherit;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #ccc;
+}
+.signup-form input:not([type='checkbox']):focus,
+.signup-form select:focus {
+  outline: none;
+  border: 1px solid #0e4f1f;
+  background-color: #dbffda;
+}
+/* Check Box Styles */
+.signup-form input[type='checkbox'] {
+  border: 1px solid #ccc;
+  background: white;
+  width: 1rem;
+  height: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.signup-form input[type='checkbox']:focus {
+  outline: none;
+  border: 1px solid #0e4f1f;
+  /* background-color: #dbffda; */
+}
+.signup-form input[type='checkbox']:checked {
+  outline: none;
+  border: 1px solid #0e4f1f;
+  background-color: #dbffda;
+}
+/* Validation Form */
+.signup-form input:invalid {
+  background-color: #ffe7e7;
+  border-color: #fc6b6b;
+}
+.invalid {
+  background-color: #ffe7e7;
+  border-color: #fc6b6b;
+}
+/* Button */
+.signup-form button[type='submit'] {
+  display: block;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+}
+.btn[disabled] {
+  border-color: #868686;
+  background-color: #e6e6e6;
+  color: #868686;
+  cursor: not-allowed;
+}
+@media (min-width: 40rem) {
+  .signup-form {
+    max-width: 50rem;
+    margin: 0 auto;
+    grid-template-columns: 12rem auto;
+    grid-row-gap: 1rem;
+    grid-column-gap: 0.5rem;
+    grid-auto-rows: 2rem;
+  }
+  .signup-form .signup-form label[for='title'] {
+    grid-column-end: span 2;
+  }
+  .signup-form select[id='title'] {
+    grid-column-end: span 2;
+  }
+  .signup-form__checkbox {
+    grid-column-end: 2 span;
+  }
+  .signup-form button[type='submit'] {
+    height: 3rem;
+    padding: 0;
+  }
+}
