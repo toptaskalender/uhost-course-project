@@ -1,0 +1,24 @@
+{
+  "name": "project-uhost",
+  "version": "1.0.0",
+  "description": "uHost is a course project designed by Maximilian Schwarzmüller and Manuel Lorenz. I completed their course and coded along with them throughout the course.",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toptaskalender/uhost-course-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toptaskalender/uhost-course-project/issues"
+  },
+  "homepage": "https://github.com/toptaskalender/uhost-course-project#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
+  }
+}
